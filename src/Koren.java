@@ -14,18 +14,12 @@ public class Koren
     @Override
     public String toString()
     {
-        if(pocet == pocetKorenov.ZIADNY)
+        return switch(pocet)
         {
-           return "Rovnica nema koren!";
-        }
-        else if(pocet==pocetKorenov.JEDEN)
-        {
-            return "Rovnica ma koren x="+k1;
-        }
-        else
-        {
-
-            return "Rovnica ma koren x1="+k1+" x2="+k2;
-        }
+            case ZIADNY -> "Rovnica nema koren!";
+            case JEDEN ->  String.format("Rovnica ma koren x= %.2f",k1);
+            case DVA -> String.format("Rovnica ma koren x1=%.2f x2= %.2f" ,k1,k2);
+            case VELA -> "Rovnica ma vela korenov!";
+        };
     }
 }

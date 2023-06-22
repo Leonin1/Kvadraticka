@@ -2,5 +2,7 @@ public enum pocetKorenov
 {
     ZIADNY,
     JEDEN,
-    DVA;
+    DVA,
+    VELA;
+
 }
